@@ -66,7 +66,6 @@ console.print("[bold cyan]Evaluating models...\n")
 
 results = {}
 
-# Keep a clean copy of the test set so we can apply different noise levels per model
 x_clean = np.copy(x)
 
 for model_file in model_files:
