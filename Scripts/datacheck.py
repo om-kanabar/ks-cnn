@@ -25,6 +25,15 @@ if source == '1':
     data = np.load(data_path)
     images = data['images']
     labels = data['labels']
+    # Convert labels to characters using ASCII codes (EMNIST mapping is byclass)
+    # The labels are expected to be integers representing ASCII codes or indices
+    # We need to load the mapping file to map label indices to characters
+    mapping_path = os.path.join(project_root, "Data", "emnist-byclass-mapping.txt")
+    mapping = {}
+    with open(mapping_path, "r") as f:
+        for line in f:
+            label_index, ascii_code = map(int, line.strip().split())
+            mapping[label_index] = chr(ascii_code)
     num_images = get_int("How many images? (default 9): ", 9)
     indices = random.sample(range(len(images)), num_images)
     random_samples = [(images[i], labels[i]) for i in indices]
@@ -60,7 +69,8 @@ if source == '1':
         img = img / 255.0
         plt.subplot(rows, cols, index + 1)
         plt.imshow(img, cmap='gray')
-        plt.title(label)
+        label_char = mapping.get(label, str(label))
+        plt.title(label_char)
         plt.axis('off')
 else:
     for index, example in enumerate(random_samples):
@@ -69,7 +79,7 @@ else:
         plt.subplot(rows, cols, index + 1)
         plt.imshow(img, cmap='gray')
         label_value = example['label'].numpy()
-        label_name = mapping[label_value]
+        label_name = mapping.get(label_value, str(label_value))
         plt.title(label_name)
         plt.axis('off')
 
