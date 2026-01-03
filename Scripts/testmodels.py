@@ -72,7 +72,6 @@ x_clean = np.copy(x)
 for model_file in model_files:
     model_path = os.path.join(models_dir, model_file)
     
-    # Determine noise strength based on kernel size
     parts = model_file.split('_')
     if len(parts) >= 3:
         kernel_size = parts[1]
