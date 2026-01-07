@@ -1,70 +1,32 @@
-# The Effect of Convolutional Kernel Size on Handwritten Character Recognition Accuracy
+# Kernel Size in Character Recognition Accuracy
 ### By: Om Kanabar
+--- 
 
-*This project is distributed under a separate license agreement. By using, copying, modifying, or distributing any part of this repository, you agree to the terms and conditions of that license.*
+## IV & DV
+In this experiment, the independent variable is the size of the convolutional kernel. The experimental group for this experiment consists of a kernel size of 2x2 pixels (px), 4x4 px, and 5x5 px. The control for this experiment is a kernel size of 3x3 px.  The dependent variable for this experiment is the model’s accuracy in recognizing handwritten characters from the EMNIST Dataset.
 
-## A Few Key Terms Before We Start
-
-1. **Neural Network**: A neural network is a computer program that is based on the human brain. This works by learning patterns from data. A neural network modifies its connections to learn. A neural network can recognize images or understand speech, or even make a prediction. Each hidden layer in the neural network will perform a mathematical operation to help it make its prediction. (See Fig 1)
-
-![Neural Network Visualization](Assets/NeuralNetworkVisualization.png "Neural Network Visualization")
----
-Fig. 1 Neural Network Visualization.
-
----
-
-2. **Convolutional Neural Network (CNN)**: A type of neural network that is designed to for images. It is preferred for image tasks due to it processing images using layers that detect patterns like edges, shapes, and textures.
-
-3. **Kernel**: A small array of numbers that is also known as a filter, it moves across an image in a CNN in order to spot patterns or edges, or shapes. This kernel’s size will determine just how much of an image is processed at one given point in order to detect detailed or large features.
-
-## A bit about this project
-
-This project deals with how the kernel size changes affect the accuracy of CNN's which are made for recognizing handwritten characters using the EMNIST byclass dataset. This experiment intends to find out how different kernel sizes influence learning efficiency and classification performances since several models will be trained with different kernel sizes.
-
-## Objective/Purpose
-The goal of this project is to investigate how convolutional kernel size affects the accuracy  and learning efficiency of CNNs trained on handwritten character data
-
-## Variables
-
-### **IV:** Kernel Size
-#### **Experimental Group:** 2x2, 4x4, 5x5
-#### **Control Group**: 3x3
-
-### **DV:** Accuracy (Number of Images Identified Correctly/Total Number of Images)
-
-## Research Question
-
-#### How does convolutional kernel size affect handwritten character recognition accuracy?
 
 ## Hypothesis
-#### If the kernel size of a convolutional neural network is 4x4, it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details.
+If the kernel size of a convolutional neural network is 4x4 px, then it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details.
 
+## Methods
+Prepare the EMNIST dataset using the training ByClass split by oversampling. For building the convolutional neural network (CNN), add a convolution layer with the desired kernel size, a max-pooling layer, 2 convolution layers with the desired kernel size, and a max-pooling layer. Using the oversampled dataset, convert each image into a 4-dimensional tensor and train the CNN on it. Use the testing ByClass split to evaluate the CNN's accuracy. Compare the data to support or reject the hypothesis. 
 
-## Materials
-1. Laptop (> 8 GB of RAM Recommended)
-2. Terminal/Command Prompt
-3. Visual Studio Code
-4. Python
-5. Github
-6. Operating System
-6. `pip`
-7. `Matplotlib`
-8. `Keras`
-9. `Tensorflow`
-10. `Tensorflow Datasets`
-11. `Numpy`
-12. `Console`
-13. `scikit-learn`
-14. EMNIST ByClass Dataset
-15. EMNIST ByClass Mapping
+## Results
+Full results are available in [Results/model_results.csv](https://github.com/om-kanabar/ks-cnn/blob/1dd1d9e30bc8a3ed7a12fcb880710a31331fae1e/Results/model_results.csv)
 
-## Instructions
+Kernel Size (px): Accuracy
+2x2: 80.413%
+3x3 (Control): 81.547%
+4x4: 81.506%
+5x5 px: 82.010%
 
-1. Download the repository by going to https://github.com/om-kanabar/ScienceFair2025/archive/refs/heads/main.zip
-2. Unzip the file by clicking on it
-3. Open it in Visual Code Studio (VCS)
-- If you don't have VCS download it here: https://code.visualstudio.com/
-4. Press Ctrl + `
-5. Type `python -m venv venv` and hit enter to create a virtual environment
-6. To activate the virual environment type `source venv/bin/activate` and hit enter 
-7. To install the necessary packages type `pip install -r requirements.txt`
+## Conclusion
+  Artificial Intelligence and neural networks are increasingly drawing attention from students, teachers, law enforcement, companies, the postal service, and consumers alike. This experiment made multiple convolutional neural networks that recognized handwritten characters from the EMNIST dataset. More importantly, this experiment’s results can be applied to the real world for multiple purposes, like business records, handwritten mail addresses, and historical records, among others.
+  In this experiment, the independent variable was the size of the convolutional kernel. The experimental group for this experiment consisted of a kernel size of 2x2 px, 4x4 px, and 5x5 px. The control for this experiment was a kernel size of 3x3 px. The dependent variable for this experiment was the model’s accuracy in recognizing handwritten characters from the EMNIST Dataset.
+  There are some limitations to this experiment, though. Experimental error could have affected the accuracy and reproducibility of this experiment. One possible experimental error is that, before training a neural network, including CNNs, the computer generates random weights for all of the neurons so it can learn. Slight variances in the start could’ve slightly favored a certain model. 
+  Another possible source of error is that the EMNIST dataset is relatively small, as some characters may be harder to distinguish, leading to small errors in classification that are inherent to the dataset. 
+  Randomness inside of code may also pose experimental error, which is why this experiment trained 3 separate CNN’s, tested them 3 different times, and then averaged their results for the conclusion to help normalize results per CNN, and ensure that repeated runs of the experiment's code will produce similar results.
+  The results of this experiment rejected the hypothesis: If the kernel size of a convolutional neural network is 4x4 px, then it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details. 
+  The best kernel size for handwritten recognition was a kernel size of 5x5, followed by 3x3, 4x4, and 2x2, with a mean accuracy of 82.010%, 81.547%, 81.506%, and 80.413%, respectively. 
+  One likely explanation for 5x5 px having the highest accuracy is that even-sized layers don’t have a true center pixel, which can introduce misalignment across convolutional layers. Another likely explanation is that the 5x5 px kernel had the highest accuracy because it balanced local detail and contextual awareness for character recognition. 
