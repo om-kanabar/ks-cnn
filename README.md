@@ -9,6 +9,7 @@ This project was created for Chicago Public Schools STEM Fair 2025-2026.
 ---
 
 ***This README was written by the author and outlines the methodology, results, and conclusions drawn from the author’s original research paper; all information contained here is original, and the entire research paper is not available to the public.***
+
 ---
 ## Table of Contents
 - [Overview](#overview)
