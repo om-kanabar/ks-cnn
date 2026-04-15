@@ -4,6 +4,12 @@
 This project was created for Chicago Public Schools STEM Fair 2025-2026.
 
 ---
+**Note:** This project was developed using Visual Studio Code on macOS and has not been fully tested on Windows or Linux.
+
+---
+
+***This README was written by the author and outlines the methodology, results, and conclusions drawn from the author’s original research paper; all information contained here is original, and the entire research paper is not available to the public.***
+---
 ## Table of Contents
 - [Overview](#overview)
 - [Hypothesis](#hypothesis)
@@ -55,7 +61,7 @@ cd ks-cnn
 
 2. **Create a virtual environment** *(recommended)*
 
-- MacOS/Linux
+- macOS/Linux
 
   ```bash
     python -m venv venv
@@ -96,9 +102,13 @@ python3 testmodels.py
 ```
 /ks-cnn
 ├── Assets
-│   └── NeuralNetworkVisualization.png
+│   ├── NeuralNetworkVisualization.png
+│   ├── image12.png
+│   └── image9.png
 ├── Data
+│   ├── emnist-byclass-balanced.npz
 │   └── emnist-byclass-mapping.txt
+├── LICENSE
 ├── Learning
 │   ├── pandas_numpy_practice.py
 │   ├── plot_sample.py
@@ -106,7 +116,7 @@ python3 testmodels.py
 │   └── visualoptimize.py
 ├── Miscellaneous
 │   └── uncited-sources.txt
-├── Models
+├── README.md
 ├── Results
 │   └── model_results.csv
 ├── Scripts
@@ -118,9 +128,6 @@ python3 testmodels.py
 │   ├── train-all.py
 │   ├── train-base.py
 │   └── train-model.py
-├── LICENSE
-├── README.md
-├── project_structure.txt
 └── requirements.txt
 ```
 
@@ -153,9 +160,9 @@ python3 testmodels.py
 
 *Table 1\. Raw Results*
 
----
-
 *\*All results have been rounded to three decimal places.*
+
+---
 
 ### Per-Model Mean Accuracy Data Table\* 
 
@@ -176,10 +183,10 @@ python3 testmodels.py
 
 *Table 2\. Per-Model Averaged Results*
 
----
-
 *\*Means were calculated with the raw, non-rounded values*  
 *†All results have been rounded to three decimal places*
+
+---
 
 ### Mean Accuracy Data Table\*
 
@@ -192,10 +199,10 @@ python3 testmodels.py
 
 *Table 3\. Mean Results*
 
----
-
 *\*Means were calculated with the raw, non-rounded values*  
 *†All results have been rounded to three decimal places*
+
+---
 
 ### Per Model Mean Data Graph
 
@@ -203,11 +210,15 @@ python3 testmodels.py
 ![Fig. 1](/Assets/image9.png)
 *Per-Model Mean Data Graph. Visualization created by the researcher with Tableau Public* 
 
+---
+
 ### Mean Data Graph
 
 **Fig. 2**  
 ![Fig. 2](/Assets/image12.png)
 *Mean Data Graph. Visualization created by the researcher with Tableau Public*
+
+---
 
 ## Conclusion
 
