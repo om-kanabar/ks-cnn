@@ -233,9 +233,9 @@ Another possible source of error is that the EMNIST dataset is relatively small,
 
 Randomness inside of code may also pose experimental error, which is why this experiment trained 3 separate CNNs, tested them 3 different times, and then averaged their results to help normalize results and ensure that repeated runs of the experiment's code will produce similar results.
 
-The results of this experiment **rejected the hypothesis**: If the kernel size of a convolutional neural network is 4x4 px, then it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details.
-
 The best kernel size for handwritten recognition was 5x5 px, followed by 3x3, 4x4, and 2x2, with a mean accuracy of 82.010%, 81.547%, 81.506%, and 80.413%, respectively.
+
+Therfore, the results of this experiment **rejected the hypothesis**: If the kernel size of a convolutional neural network is 4x4 px, then it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details.
 
 One likely explanation for 5x5 px having the highest accuracy is that even-sized kernels don't have a true center pixel, which can introduce misalignment across convolutional layers. Another likely explanation is that the 5x5 px kernel balanced local detail and contextual awareness for character recognition.
 
