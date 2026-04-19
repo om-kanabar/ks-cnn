@@ -115,8 +115,6 @@ python3 testmodels.py
 │   ├── plot_sample.py
 │   ├── tiny_data.csv
 │   └── visualoptimize.py
-├── Miscellaneous
-│   └── uncited-sources.txt
 ├── README.md
 ├── Results
 │   └── model_results.csv
