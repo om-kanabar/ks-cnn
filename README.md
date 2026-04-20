@@ -22,6 +22,7 @@ This project was created for Chicago Public Schools STEM Fair 2025-2026.
 - [Methods](#methods)
 - [Results](#results)
 - [Conclusion](#conclusion)
+- [Contact](#contact)
 - [License](#license)
 
 
@@ -236,6 +237,10 @@ The best kernel size for handwritten recognition was 5x5 px, followed by 3x3, 4x
 Therfore, the results of this experiment **rejected the hypothesis**: If the kernel size of a convolutional neural network is 4x4 px, then it will achieve the highest accuracy because smaller kernels capture very local features but may miss larger patterns, while larger kernels can blur finer details.
 
 One likely explanation for 5x5 px having the highest accuracy is that even-sized kernels don't have a true center pixel, which can introduce misalignment across convolutional layers. Another likely explanation is that the 5x5 px kernel balanced local detail and contextual awareness for character recognition.
+
+## Contact
+
+You can contact me [here](https://omkanabar.com/contact?from=ks-cnn).
 
 ## License
 
