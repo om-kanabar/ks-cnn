@@ -241,7 +241,3 @@ One likely explanation for 5x5 px having the highest accuracy is that even-sized
 ## Contact
 
 You can contact me [here](https://omkanabar.com/contact?from=ks-cnn).
-
-## License
-
-Copyright © 2025–2026 Om Kanabar. This project is licensed for educational and non-commercial use only. See [`LICENSE`](./LICENSE) for full terms.
